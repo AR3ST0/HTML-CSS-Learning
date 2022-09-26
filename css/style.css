@@ -54,11 +54,12 @@ logo-box {
     top: 40%;
     left: 50%;
     transform: translate(-50%,-50%);
+    text-align: center;
 }
 .heading-primary{
     color: #fff;
     text-transform: uppercase;
-
+margin-bottom: 6rem;
 }
 .heading-primary-main {
 display: block;
@@ -79,19 +80,57 @@ animation-delay: 0.1s;
 }
 
 
+/* BTN */
+.btn:hover{
+    transform: translateY(-0.3rem);
+    box-shadow: 0 1rem 1.5rem rgba(0, 0, 0, .4);
+}
+.btn:active{
+    transform: translateY(-0.1rem);
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, .4);
+}
+
+
+.btn:link,
+.btn:visited {
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 1.5rem 4rem;
+    display: inline-block;
+    
+    border-radius: 10rem;
+    transition: all .2s;  
+}
+.btn-white {
+    background-color: #fff;
+    color: #777;
+}
+
+
+
+
+
+
+
+
+
+/* Animantion */
 @keyframes moveInLeft {
     0% {
         opacity: 0;
         transform: translateX(-50rem);
     }
-    90%{
-transform: translateX(0.5rem);
+
+    90% {
+        transform: translateX(0.5rem);
     }
+
     100% {
         opacity: 1;
         transform: translate(0);
     }
 }
+
 @keyframes moveInRight {
     0% {
         opacity: 0;
