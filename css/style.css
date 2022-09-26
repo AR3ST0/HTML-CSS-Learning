@@ -49,6 +49,12 @@ logo-box {
 .logo {
     height: 4.5rem;
 }
+.text-box{
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
 .heading-primary{
     color: #fff;
     text-transform: uppercase;
@@ -57,12 +63,47 @@ logo-box {
 .heading-primary-main {
 display: block;
 font-size: 6rem;
-font-weight: 100;
+font-weight: 300;
 letter-spacing: 3.5rem;
+animation: moveInLeft 3s;
+animation-delay: 0.1s;
+
 }
 .heading-primary-sub {
 display: block;
 font-size: 2rem;
 font-weight: 700;
 letter-spacing: 1.74rem;
+animation: moveInRight 3s;
+animation-delay: 0.1s;
+}
+
+
+@keyframes moveInLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-50rem);
+    }
+    90%{
+transform: translateX(0.5rem);
+    }
+    100% {
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+@keyframes moveInRight {
+    0% {
+        opacity: 0;
+        transform: translateX(50rem);
+    }
+
+    90% {
+        transform: translateX(-0.5rem);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate(0);
+    }
 }
