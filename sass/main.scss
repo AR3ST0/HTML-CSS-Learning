@@ -1,14 +1,13 @@
-/*
-COLORS:
+@import "bsae/base";
 
-Light green: #7ed56f
-Medium green: #55c57a
-Dark green: #28b485
 
-*/
 $color-primary:#55c57a;
 $color-primary-light:#7ed56f;
 $color-primary-dark:#28b485;
+
+$color-white: #fff;
+$color-gray: #777;
+
 html {
     font-size: 62.5%;
 
@@ -40,107 +39,104 @@ body {
     background-size: cover;
     background-position: top;
     clip-path: polygon(0 0, 100% 0, 100% 80vh, 0 100%);
+
+    &__logo-box {
+            position: absolute;
+            top: 4rem;
+            left: 4rem;
+        }
+
+    &__logo {
+            height: 4.5rem;
+        }
+    &__text-box {
+        position: absolute;
+        top: 40%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+    }
 }
 
 
-.header__logo-box {
-    position: absolute;
-    top: 4rem;
-    left: 4rem;
-}
 
-.header__logo {
-    height: 4.5rem;
-}
 
-.header__text-box {
-    position: absolute;
-    top: 40%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-}
+
+
 
 .heading-primary {
-    color: #fff;
+    color: $color-white;
     text-transform: uppercase;
     margin-bottom: 6rem;
     backface-visibility: hidden;
+    &--main {
+            display: block;
+            font-size: 6rem;
+            font-weight: 300;
+            letter-spacing: 3.5rem;
+            animation: moveInLeft 3s;
+            animation-delay: 0.1s;
+    
+        }
+    &--sub {
+        display: block;
+        font-size: 2rem;
+        font-weight: 700;
+        letter-spacing: 1.74rem;
+        animation: moveInRight 3s;
+        animation-delay: 0.1s;
+    }
 }
 
-.heading-primary--main {
-    display: block;
-    font-size: 6rem;
-    font-weight: 300;
-    letter-spacing: 3.5rem;
-    animation: moveInLeft 3s;
-    animation-delay: 0.1s;
 
-}
-
-.heading-primary--sub {
-    display: block;
-    font-size: 2rem;
-    font-weight: 700;
-    letter-spacing: 1.74rem;
-    animation: moveInRight 3s;
-    animation-delay: 0.1s;
-}
 
 
 /* BTN */
-.btn:hover {
-    transform: translateY(-0.3rem);
-    box-shadow: 0 1rem 1.5rem rgba(0, 0, 0, .4);
-}
-
-.btn:active {
-    transform: translateY(-0.1rem);
-    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, .4);
-}
-
-
-.btn:link,
-.btn:visited {
-    text-transform: uppercase;
-    text-decoration: none;
-    font-size: 2rem;
-    padding: 1.5rem 4rem;
-    display: inline-block;
-    position: relative;
-    border-radius: 10rem;
-    transition: all .2s;
-
-
-}
-
-.btn--white {
-    background-color: #fff;
-    color: #777;
-}
-
-.btn::after {
-    content: "";
-    display: inline-block;
-    height: 100%;
-    width: 100%;
-    border-radius: 100rem;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: -1;
-
-    transition: all .4s;
-}
-
-.btn--white::after {
-    background-color: #fff;
-}
-
-.btn:hover::after {
-    transform: scale(1.5);
-
-    opacity: 0;
+.btn{
+    &:hover {
+            transform: translateY(-0.3rem);
+            box-shadow: 0 1rem 1.5rem rgba(0, 0, 0, .4);
+        }
+    &:active {
+            transform: translateY(-0.1rem);
+            box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, .4);
+        }
+    &:link,
+    &:visited {
+            text-transform: uppercase;
+            text-decoration: none;
+            font-size: 2rem;
+            padding: 1.5rem 4rem;
+            display: inline-block;
+            position: relative;
+            border-radius: 10rem;
+            transition: all .2s;
+        }
+    &--white {
+            background-color: $color-white;
+            color: $color-gray;
+        }
+    &::after {
+            content: "";
+            display: inline-block;
+            height: 100%;
+            width: 100%;
+            border-radius: 100rem;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: -1;
+    
+            transition: all .4s;
+        }
+    &--white::after {
+            background-color: $color-white;
+        }
+    &:hover::after {
+            transform: scale(1.5);
+    
+            opacity: 0;
+        }
 }
 
 
